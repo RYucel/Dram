@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2020"/>
+      <stop offset="50%" stop-color="#141515"/>
+      <stop offset="100%" stop-color="#0a0b0b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe19c"/>
+      <stop offset="35%" stop-color="#f5a623"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="60%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background with rounded corners for standalone display -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="url(#goldGrad)" stroke-width="4" opacity="0.35"/>
+
+  <!-- Outer Ring Badge -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="url(#goldGrad)" stroke-width="3" opacity="0.4" stroke-dasharray="8 6"/>
+  <circle cx="256" cy="256" r="172" fill="#181a1a" stroke="url(#goldGrad)" stroke-width="4"/>
+
+  <!-- Whiskey Glencairn Glass Shape -->
+  <g transform="translate(256, 252)">
+    <!-- Liquid Glow -->
+    <path d="M -52 10 Q -60 50 -28 72 Q 0 84 28 72 Q 60 50 52 10 Z" fill="url(#liquidGrad)" filter="url(#glow)" opacity="0.45"/>
+
+    <!-- Glass Bowl & Body -->
+    <path d="M -34 -68 L 34 -68 Q 48 -10 60 22 Q 68 58 36 78 Q 0 94 -36 78 Q -68 58 -60 22 Q -48 -10 -34 -68 Z" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Liquid Content -->
+    <path d="M -48 16 Q -56 50 -26 70 Q 0 80 26 70 Q 56 50 48 16 Q 24 24 0 24 Q -24 24 -48 16 Z" 
+          fill="url(#liquidGrad)"/>
+
+    <!-- Glass Stem & Base -->
+    <path d="M -16 84 L -18 102 L -42 110 L 42 110 L 18 102 L 16 84 Z" 
+          fill="url(#goldGrad)"/>
+    <ellipse cx="0" cy="110" rx="44" ry="7" fill="url(#goldGrad)"/>
+
+    <!-- Glass Rim & Reflection Highlights -->
+    <ellipse cx="0" cy="-68" rx="34" ry="6" fill="none" stroke="url(#goldGrad)" stroke-width="5"/>
+    <path d="M -26 -50 Q -36 0 -44 32" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="20" cy="45" r="3" fill="#ffffff" opacity="0.7"/>
+    <circle cx="-10" cy="55" r="2.5" fill="#ffffff" opacity="0.6"/>
+  </g>
+
+  <!-- Brand Monogram / Accent Stars -->
+  <path d="M 256 56 L 261 70 L 275 70 L 264 78 L 268 92 L 256 83 L 244 92 L 248 78 L 237 70 L 251 70 Z" fill="url(#goldGrad)"/>
+  
+  <!-- Text Label -->
+  <text x="256" y="420" font-family="'Montserrat', 'Inter', sans-serif" font-size="28" font-weight="800" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="4">
+    DRAMTRACKER
+  </text>
+  <text x="256" y="445" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#d7c3ae" text-anchor="middle" letter-spacing="3" opacity="0.85">
+    KKTC
+  </text>
+</svg>

@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-surface: #121414;
+    --bg-surface-container: #1e2020;
+    --bg-surface-container-high: #282a2b;
+    --bg-surface-container-highest: #333535;
+    --bg-surface-container-low: #1a1c1c;
+    --text-primary: #ffc880;
+    --color-primary-container: #f5a623;
+    --text-on-surface: #e2e2e2;
+    --text-on-surface-variant: #d7c3ae;
+    --outline-variant: #524534;
+    --secondary: #e9c349;
+    --secondary-container: #af8d11;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #121414;
+    color: #e2e2e2;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, h4, .font-heading, .font-price {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Light Theme Styling & Color Mappings */
+html.light body {
+  background-color: #f7f5f0;
+  color: #1f1b16;
+}
+
+html.light .bg-\[\#121414\] {
+  background-color: #f7f5f0 !important;
+}
+
+html.light .bg-\[\#1e1e1e\],
+html.light .bg-\[\#1e2020\] {
+  background-color: #ffffff !important;
+  border-color: #e5ded2 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light .bg-\[\#141515\],
+html.light .bg-\[\#1a1c1c\],
+html.light .bg-\[\#181a1a\],
+html.light .bg-\[\#1b1d1d\] {
+  background-color: #f9f7f2 !important;
+  border-color: #e6dfd4 !important;
+}
+
+html.light .bg-\[\#282a2b\] {
+  background-color: #f4efe7 !important;
+  border-color: #e6ded3 !important;
+}
+
+html.light .bg-\[\#242626\] {
+  background-color: #fbf9f5 !important;
+  border-color: #e8e1d6 !important;
+}
+
+html.light .bg-\[\#333535\] {
+  background-color: #eee7db !important;
+  color: #3b332b !important;
+  border-color: #dfd7c9 !important;
+}
+
+html.light .bg-\[\#12161c\] {
+  background-color: #f2eee6 !important;
+  border-color: #e2dacf !important;
+}
+
+/* Light Mode Text Overrides */
+html.light .text-\[\#e2e2e2\] {
+  color: #1c1917 !important;
+}
+
+html.light .text-\[\#d7c3ae\] {
+  color: #5d5348 !important;
+}
+
+html.light .text-\[\#ffc880\] {
+  color: #b45309 !important;
+}
+
+html.light .text-\[\#c8c6c5\] {
+  color: #443e37 !important;
+}
+
+html.light .text-\[\#9f8e7a\] {
+  color: #786b5c !important;
+}
+
+html.light .text-\[\#e9c349\] {
+  color: #92400e !important;
+}
+
+html.light .placeholder-\[\#d7c3ae\]\/70::placeholder,
+html.light .placeholder-\[\#d7c3ae\]\/60::placeholder {
+  color: #8c7e6f !important;
+}
+
+/* Light Mode Badge Overrides */
+html.light .bg-\[\#e9c349\] {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1px solid #fde68a !important;
+}
+
+html.light .bg-\[\#333535\].text-\[\#e2e2e2\] {
+  background-color: #eee7db !important;
+  color: #443c33 !important;
+  border: 1px solid #ded5c6 !important;
+}
+
+/* Light Mode Border Overrides */
+html.light .border-\[\#524534\] {
+  border-color: #ded4c5 !important;
+}
+
+html.light .border-\[\#524534\]\/50,
+html.light .border-\[\#524534\]\/40,
+html.light .border-\[\#524534\]\/30 {
+  border-color: #e7dfd3 !important;
+}
+
+html.light .border-\[\#333535\] {
+  border-color: #e5ddd0 !important;
+}
+
+html.light .border-white\/10 {
+  border-color: #e8e1d5 !important;
+}
+
+html.light .border-white\/5 {
+  border-color: #ebe4d8 !important;
+}
+
+html.light .border-\[rgba\(255\,255\,255\,0\.1\)\] {
+  border-color: #e8e1d5 !important;
+}
+
+html.light .divide-\[\#333535\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #e5ddd0 !important;
+}
+
+html.light .divide-\[\#524534\]\/30 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #ebe4d8 !important;
+}
+
+/* Light Mode Hover States */
+html.light .hover\:bg-\[\#282a2b\]:hover {
+  background-color: #f4efe7 !important;
+}
+
+html.light .hover\:bg-\[\#38393a\]:hover {
+  background-color: #eae3d6 !important;
+}
+
+html.light .hover\:bg-\[\#1e2020\]:hover {
+  background-color: #f7f3eb !important;
+}
+
+html.light .group:hover .group-hover\:text-\[\#ffc880\] {
+  color: #b45309 !important;
+}
+
+/* Input Fields in Light Mode */
+html.light input[type="text"],
+html.light input[type="number"],
+html.light select,
+html.light textarea {
+  color: #1c1917 !important;
+}
+
+/* Header & Bottom Nav in Light Mode */
+html.light header {
+  background-color: #ffffff !important;
+  border-color: #e5ddd0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light #bottom-navbar {
+  background-color: #ffffff !important;
+  border-color: #e5ddd0 !important;
+  box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Modal Backdrops & Cards in Light Mode */
+html.light .bg-black\/75,
+html.light .bg-black\/80 {
+  background-color: rgba(28, 25, 23, 0.65) !important;
+}
+
+/* Recharts Light Theme Overrides */
+html.light .recharts-cartesian-grid line {
+  stroke: #e7dfd3 !important;
+  opacity: 0.8 !important;
+}
+html.light .recharts-text,
+html.light .recharts-cartesian-axis-tick text {
+  fill: #61564c !important;
+}
+html.light .recharts-cartesian-axis-line {
+  stroke: #ded4c5 !important;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fill-icon {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.unfill-icon {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass-card {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+

@@ -1,0 +1,35 @@
+{
+  "name": "DramTracker KKTC - Viski Fiyat Takibi",
+  "short_name": "DramTracker",
+  "description": "Kuzey Kıbrıs güncel viski ve içki fiyatları takip, karşılaştırma ve topluluk platformu.",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "window-controls-overlay"],
+  "orientation": "portrait-primary",
+  "background_color": "#121414",
+  "theme_color": "#121414",
+  "lang": "tr",
+  "categories": ["shopping", "food", "lifestyle", "utilities"],
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

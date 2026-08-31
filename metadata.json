@@ -1,0 +1,7 @@
+{
+  "name": "DramTracker KKTC",
+  "description": "Kuzey Kıbrıs güncel viski fiyatları takip, karşılaştırma ve topluluk platformu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
