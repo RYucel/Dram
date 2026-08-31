@@ -61,8 +61,13 @@ git remote add origin https://github.com/KULLANICI_ADINIZ/dramtracker-kktc.git
 git push -u origin main
 ```
 
-### 4. Ücretsiz Dağıtım (Deploy):
-- **Vercel / Netlify / Cloudflare Pages**: GitHub deponuzu bağlayıp `npm run build` ve `dist` çıktı dizini ile 30 saniyede canlıya alabilirsiniz.
+### 4. Cloudflare Pages & Vercel Dağıtım Ayarları:
+- **Cloudflare Pages:**
+  - **Framework preset**: `Vite` (veya `None`)
+  - **Build command**: `npm run build`
+  - **Build output directory**: `dist`
+  - **Environment Variables (Node.js version)**: `NODE_VERSION: 20` (isteğe bağlı)
+- **Vercel / Netlify**: GitHub deponuzu bağlayıp `npm run build` ve `dist` çıktı dizini ile otomatik canlıya alabilirsiniz.
 - **GitHub Pages**: `dist/` klasörünü `gh-pages` dalına push ederek de ücretsiz yayınlayabilirsiniz.
 
 ---
