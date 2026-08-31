@@ -61,14 +61,18 @@ git remote add origin https://github.com/KULLANICI_ADINIZ/dramtracker-kktc.git
 git push -u origin main
 ```
 
-### 4. Cloudflare Pages & Vercel Dağıtım Ayarları:
-- **Cloudflare Pages:**
-  - **Framework preset**: `Vite` (veya `None`)
-  - **Build command**: `npm run build`
-  - **Build output directory**: `dist`
-  - **Environment Variables (Node.js version)**: `NODE_VERSION: 20` (isteğe bağlı)
-- **Vercel / Netlify**: GitHub deponuzu bağlayıp `npm run build` ve `dist` çıktı dizini ile otomatik canlıya alabilirsiniz.
-- **GitHub Pages**: `dist/` klasörünü `gh-pages` dalına push ederek de ücretsiz yayınlayabilirsiniz.
+### 4. Cloudflare Pages Dağıtım (Deploy) Ayarları:
+Cloudflare Pages'te **`npm ci`** veya **`bun.lock`** hatası almamak için ayarları şu şekilde yapınız:
+- **Framework preset**: `Vite` *(veya `None`)*
+- **Build command**: `npm run build`
+- **Build output directory**: `dist`
+- **Root directory**: `/` *(boş bırakın)*
+- **Build settings > Build system > Package manager**: `npm`
+- **Environment Variables**:
+  - `NODE_VERSION` = `20` *(veya `22`)*
+  - `NPM_CONFIG_LEGACY_PEER_DEPS` = `true` *(isteğe bağlı)*
+
+> 💡 **İpucu (Hızlı Çözüm):** Eğer Cloudflare Pages'te `npm ci can only install...` hatası almaya devam ederseniz, Cloudflare Dashboard -> **Settings** -> **Builds & deployments** -> **Build configurations** kısmındaki **Install command** alanını `npm install` olarak ayarlayınız.
 
 ---
 
